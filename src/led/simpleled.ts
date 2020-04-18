@@ -1,5 +1,6 @@
 import five, { Board, Led } from 'johnny-five';
 import {RaspiIO as Raspi} from 'raspi-io';
+import pin from './pin';
 
 const simpleled = {
     init: () => {
@@ -8,12 +9,9 @@ const simpleled = {
         }); 
 
         board.on('ready', () => {
-            const led: Led = new five.Led(13);
+            const led: Led = new five.Led(pin(40));
 
-            console.log(led);
-            
-
-            led.blink(500);
+            led.blink(200);
         });
     }
 };
