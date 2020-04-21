@@ -1,3 +1,3 @@
-import simpleled from './led/simpleled';
+import rgb from './led/rgb';
 
-simpleled.init();
+rgb.init();
